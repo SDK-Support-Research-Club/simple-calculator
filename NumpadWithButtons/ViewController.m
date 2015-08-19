@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#define DBLG NSLog(@"%@ reporting!", NSStringFromSelector(_cmd));
+
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *number1TxF;
@@ -28,7 +30,7 @@
     UIBarButtonItem *subtractButton = [[UIBarButtonItem alloc] initWithTitle:@"-" style:UIBarButtonItemStylePlain target:self action:@selector(prepareToSubtract)];
     UIBarButtonItem *multiplyButton = [[UIBarButtonItem alloc] initWithTitle:@"*" style:UIBarButtonItemStylePlain target:self action:@selector(prepareToMultiply)];
     UIBarButtonItem *divideButton = [[UIBarButtonItem alloc] initWithTitle:@"/" style:UIBarButtonItemStylePlain target:self action:@selector(prepareToDivide)];
-    UIBarButtonItem *flipSign = [[UIBarButtonItem alloc] initWithTitle:@"+/-" style:UIBarButtonItemStylePlain target:self action:@selector(flipSignOfActiveTextfield)];
+    UIBarButtonItem *flipSign = [[UIBarButtonItem alloc] initWithTitle:@"+/-" style:UIBarButtonItemStylePlain target:self action:@selector(flipSignOfActiveTextField)];
     UIBarButtonItem *equalsButton = [[UIBarButtonItem alloc] initWithTitle:@"=" style:UIBarButtonItemStylePlain target:self action:@selector(calculateResults)];
     
     UIToolbar *calculatorOperationsBar = [UIToolbar new];
@@ -51,25 +53,33 @@
 -(void)prepareToDivide   {self.operationSymbol.text = @"/";}
 
     //This code has been elaborated for what I call "plain-English clarity".
--(void)flipSignOfTextfield:(UITextField*)numberTxF {
-    if (numberTxF.text.length) {
+-(void)flipSignOfActiveTextField {
+    DBLG
+    UITextField *activeTextfield;
+    if ([self.number1TxF isFirstResponder]) {activeTextfield = self.number1TxF;}
+    if ([self.number2TxF isFirstResponder]) {activeTextfield = self.number2TxF;}
+    
+    NSString *displayedValue;
+    displayedValue = activeTextfield.text;
+    
+    if (displayedValue.length) {
             //Plain-English 'setup'.
-        NSString *currentValue = numberTxF.text;
         NSString *flippedValue;
         
         BOOL valueIsNegative;
-        if ([currentValue hasPrefix:@"-"]) {valueIsNegative = YES;}
-        else                               {valueIsNegative = NO ;}
+        if ([displayedValue hasPrefix:@"-"]) {valueIsNegative = YES;}
+        else                                 {valueIsNegative = NO ;}
         BOOL valueIsPositive = !valueIsNegative;
         
             //commence 'Plain-English'
         if (valueIsNegative) {
-            flippedValue = [currentValue stringByReplacingOccurrencesOfString:@"-" withString:@""];
+            flippedValue = [displayedValue stringByReplacingOccurrencesOfString:@"-" withString:@""];
         }
         if (valueIsPositive) {
-            flippedValue = [NSString stringWithFormat:@"-%@", currentValue];
+            flippedValue = [NSString stringWithFormat:@"-%@", displayedValue];
         }
-        numberTxF.text = flippedValue;
+        
+        activeTextfield.text = flippedValue;
     }
 }
 
