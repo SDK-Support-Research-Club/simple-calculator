@@ -43,16 +43,17 @@
     [calculatorOperationsBar sizeToFit];
     self.number1TxF.inputAccessoryView = calculatorOperationsBar;
     self.number2TxF.inputAccessoryView = calculatorOperationsBar;
-    
 }
 
-    //Style for these lines chosen for clarity.
+    //The style for these lines of code chosen for clarity.
 -(void)prepareToAdd      {self.operationSymbol.text = @"+";}
 -(void)prepareToSubtract {self.operationSymbol.text = @"-";}
 -(void)prepareToMultiply {self.operationSymbol.text = @"*";}
 -(void)prepareToDivide   {self.operationSymbol.text = @"/";}
 
-    //This code has been elaborated for what I call "plain-English clarity".
+    //This code has been elaborated for what I call "plain-English clarity":
+    //"Take the displayed value, check for a minus-sign, and put it in/take it out
+    //as appropriate.
 -(void)flipSignOfActiveTextField {
     DBLG
     UITextField *activeTextfield;
@@ -82,6 +83,28 @@
         activeTextfield.text = flippedValue;
     }
 }
+
+    //Alternative Implementation:
+-(void)flipSignOfActiveTextFieldAlternate {
+    DBLG
+    UITextField *activeTextfield;
+    if ([self.number1TxF isFirstResponder]) {activeTextfield = self.number1TxF;}
+    if ([self.number2TxF isFirstResponder]) {activeTextfield = self.number2TxF;}
+    
+    NSString *displayedNumber;
+    displayedNumber = activeTextfield.text;
+    
+    if (displayedNumber.length) {
+            //NSString → double → [do operation] → Output Number → NSNumber → NSString
+        double numberValue = [displayedNumber doubleValue];
+        double flippedNumber = numberValue * -1;
+        NSString *flippedValue = [[NSNumber numberWithDouble:flippedNumber] stringValue];
+            //↑ Also good: NSNumber literal notation @(), like so: [@(flippedNumber) stringValue]
+        activeTextfield.text = flippedValue;
+    }
+    
+}
+
 
 -(void)calculateResults {
 }
