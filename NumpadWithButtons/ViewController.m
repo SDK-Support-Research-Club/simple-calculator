@@ -51,41 +51,7 @@
 -(void)prepareToMultiply {self.operationSymbol.text = @"*";}
 -(void)prepareToDivide   {self.operationSymbol.text = @"/";}
 
-    //This code has been elaborated for what I call "plain-English clarity":
-    //"Take the displayed value, check for a minus-sign, and put it in/take it out
-    //as appropriate.
 -(void)flipSignOfActiveTextField {
-    DBLG
-    UITextField *activeTextfield;
-    if ([self.number1TxF isFirstResponder]) {activeTextfield = self.number1TxF;}
-    if ([self.number2TxF isFirstResponder]) {activeTextfield = self.number2TxF;}
-    
-    NSString *displayedValue;
-    displayedValue = activeTextfield.text;
-    
-    if (displayedValue.length) {
-            //Plain-English 'setup'.
-        NSString *flippedValue;
-        
-        BOOL valueIsNegative;
-        if ([displayedValue hasPrefix:@"-"]) {valueIsNegative = YES;}
-        else                                 {valueIsNegative = NO ;}
-        BOOL valueIsPositive = !valueIsNegative;
-        
-            //commence 'Plain-English'
-        if (valueIsNegative) {
-            flippedValue = [displayedValue stringByReplacingOccurrencesOfString:@"-" withString:@""];
-        }
-        if (valueIsPositive) {
-            flippedValue = [NSString stringWithFormat:@"-%@", displayedValue];
-        }
-        
-        activeTextfield.text = flippedValue;
-    }
-}
-
-    //Alternative Implementation:
--(void)flipSignOfActiveTextFieldAlternate {
     DBLG
     UITextField *activeTextfield;
     if ([self.number1TxF isFirstResponder]) {activeTextfield = self.number1TxF;}
@@ -105,16 +71,35 @@
     
 }
 
-
 -(void)calculateResults {
-    if (self.number1TxF.text.length *
-        self.number2TxF.text.length) {
-        
-    } else {
+        //Test that neither textfield is empty; you may prefer to
+        //default an empty field as '0', or some other behavior.
+    if (!(self.number1TxF.text.length *
+          self.number2TxF.text.length)) {
         NSLog(@"Error, need two operands.");
+        return;
     }
+    DBLG
+        //NSString → double → [do operation] → Output Number → NSNumber → NSString
+    
+    double numberValue1 = [self.number1TxF.text doubleValue];
+    double numberValue2 = [self.number2TxF.text doubleValue];
+    double resultValue = 0.0;
+    if ([self.operationSymbol.text isEqualToString:@"+"]) {
+        resultValue = numberValue1 + numberValue2;
+    }
+    if ([self.operationSymbol.text isEqualToString:@"-"]) {
+        resultValue = numberValue1 - numberValue2;
+    }
+    if ([self.operationSymbol.text isEqualToString:@"*"]) {
+        resultValue = numberValue1 * numberValue2;
+    }
+    if ([self.operationSymbol.text isEqualToString:@"/"]) {
+        resultValue = numberValue1 / numberValue2;
+    }
+    NSString *resultsString = [@(resultValue) stringValue];
+    self.resultsLabel.text = resultsString;
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
