@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GFd-71-38p">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="127" id="5X7-1y-tX0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5X7-1y-tX0"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="5X7-1y-tX0"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Second Number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gvP-2r-Nuy">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Equals..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPI-yD-E5f">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="VUA-pJ-f9n"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="VUA-pJ-f9n"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="VUA-pJ-f9n"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Operation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ti-IP-DFg">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="3ti-IP-DFg" secondAttribute="bottom" constant="493" id="BGA-R8-pVK"/>
+                            <constraint firstItem="3ti-IP-DFg" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="52" id="GpP-em-m8d"/>
+                            <constraint firstItem="gvP-2r-Nuy" firstAttribute="leading" secondItem="3ti-IP-DFg" secondAttribute="trailing" constant="8" symbolic="YES" id="NqK-bS-vAa"/>
+                            <constraint firstItem="GFd-71-38p" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="96" id="OZO-Wa-gIS"/>
+                            <constraint firstItem="gvP-2r-Nuy" firstAttribute="top" secondItem="GFd-71-38p" secondAttribute="bottom" constant="8" symbolic="YES" id="V1q-3B-FFw"/>
+                            <constraint firstItem="gvP-2r-Nuy" firstAttribute="leading" secondItem="xPI-yD-E5f" secondAttribute="leading" id="ZNT-bE-rqD"/>
+                            <constraint firstItem="gvP-2r-Nuy" firstAttribute="trailing" secondItem="GFd-71-38p" secondAttribute="trailing" id="aYl-6q-kVr"/>
+                            <constraint firstItem="GFd-71-38p" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="17" id="atc-I3-zms"/>
+                            <constraint firstItem="3ti-IP-DFg" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="52" id="i33-fI-5KW"/>
+                            <constraint firstItem="GFd-71-38p" firstAttribute="leading" secondItem="gvP-2r-Nuy" secondAttribute="leading" id="jbh-Kv-zVc"/>
+                            <constraint firstItem="gvP-2r-Nuy" firstAttribute="trailing" secondItem="xPI-yD-E5f" secondAttribute="trailing" id="kpS-lj-LCn"/>
+                            <constraint firstItem="xPI-yD-E5f" firstAttribute="top" secondItem="gvP-2r-Nuy" secondAttribute="bottom" constant="25" id="tyi-rp-KDb"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="GFd-71-38p"/>
+                                <exclude reference="gvP-2r-Nuy"/>
+                                <exclude reference="xPI-yD-E5f"/>
+                                <exclude reference="3ti-IP-DFg"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="GpP-em-m8d"/>
+                                <exclude reference="i33-fI-5KW"/>
+                                <exclude reference="OZO-Wa-gIS"/>
+                                <exclude reference="atc-I3-zms"/>
+                                <exclude reference="jbh-Kv-zVc"/>
+                                <exclude reference="NqK-bS-vAa"/>
+                                <exclude reference="V1q-3B-FFw"/>
+                                <exclude reference="ZNT-bE-rqD"/>
+                                <exclude reference="aYl-6q-kVr"/>
+                                <exclude reference="kpS-lj-LCn"/>
+                                <exclude reference="tyi-rp-KDb"/>
+                                <exclude reference="BGA-R8-pVK"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="GFd-71-38p"/>
+                                <include reference="gvP-2r-Nuy"/>
+                                <include reference="xPI-yD-E5f"/>
+                                <include reference="3ti-IP-DFg"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="GpP-em-m8d"/>
+                                <include reference="i33-fI-5KW"/>
+                                <include reference="OZO-Wa-gIS"/>
+                                <include reference="atc-I3-zms"/>
+                                <include reference="jbh-Kv-zVc"/>
+                                <include reference="NqK-bS-vAa"/>
+                                <include reference="V1q-3B-FFw"/>
+                                <include reference="ZNT-bE-rqD"/>
+                                <include reference="aYl-6q-kVr"/>
+                                <include reference="kpS-lj-LCn"/>
+                                <include reference="tyi-rp-KDb"/>
+                                <include reference="BGA-R8-pVK"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="number1TxF" destination="GFd-71-38p" id="Nz3-06-gTD"/>
+                        <outlet property="number2TxF" destination="gvP-2r-Nuy" id="dYQ-iS-d4k"/>
+                        <outlet property="operationSymbol" destination="3ti-IP-DFg" id="Fmd-4L-DRH"/>
+                        <outlet property="resultsLabel" destination="xPI-yD-E5f" id="ZvT-r2-RTS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="564" y="479"/>
+        </scene>
+    </scenes>
+</document>

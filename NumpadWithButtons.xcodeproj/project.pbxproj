@@ -1,0 +1,431 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		38E197ED1B84B3180061655E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E197EC1B84B3180061655E /* main.m */; };
+		38E197F01B84B3180061655E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E197EF1B84B3180061655E /* AppDelegate.m */; };
+		38E197F31B84B3180061655E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E197F21B84B3180061655E /* ViewController.m */; };
+		38E197F61B84B3180061655E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E197F41B84B3180061655E /* Main.storyboard */; };
+		38E197F81B84B3180061655E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38E197F71B84B3180061655E /* Images.xcassets */; };
+		38E197FB1B84B3180061655E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38E197F91B84B3180061655E /* LaunchScreen.xib */; };
+		38E198071B84B3180061655E /* NumpadWithButtonsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E198061B84B3180061655E /* NumpadWithButtonsTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		38E198011B84B3180061655E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38E197DF1B84B3180061655E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38E197E61B84B3180061655E;
+			remoteInfo = NumpadWithButtons;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		38E197E71B84B3180061655E /* NumpadWithButtons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumpadWithButtons.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		38E197EB1B84B3180061655E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38E197EC1B84B3180061655E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		38E197EE1B84B3180061655E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		38E197EF1B84B3180061655E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		38E197F11B84B3180061655E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		38E197F21B84B3180061655E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		38E197F51B84B3180061655E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		38E197F71B84B3180061655E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		38E197FA1B84B3180061655E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		38E198001B84B3180061655E /* NumpadWithButtonsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NumpadWithButtonsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		38E198051B84B3180061655E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38E198061B84B3180061655E /* NumpadWithButtonsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NumpadWithButtonsTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		38E197E41B84B3180061655E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38E197FD1B84B3180061655E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		38E197DE1B84B3180061655E = {
+			isa = PBXGroup;
+			children = (
+				38E197E91B84B3180061655E /* NumpadWithButtons */,
+				38E198031B84B3180061655E /* NumpadWithButtonsTests */,
+				38E197E81B84B3180061655E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		38E197E81B84B3180061655E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				38E197E71B84B3180061655E /* NumpadWithButtons.app */,
+				38E198001B84B3180061655E /* NumpadWithButtonsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		38E197E91B84B3180061655E /* NumpadWithButtons */ = {
+			isa = PBXGroup;
+			children = (
+				38E197EE1B84B3180061655E /* AppDelegate.h */,
+				38E197EF1B84B3180061655E /* AppDelegate.m */,
+				38E197F11B84B3180061655E /* ViewController.h */,
+				38E197F21B84B3180061655E /* ViewController.m */,
+				38E197F41B84B3180061655E /* Main.storyboard */,
+				38E197F71B84B3180061655E /* Images.xcassets */,
+				38E197F91B84B3180061655E /* LaunchScreen.xib */,
+				38E197EA1B84B3180061655E /* Supporting Files */,
+			);
+			path = NumpadWithButtons;
+			sourceTree = "<group>";
+		};
+		38E197EA1B84B3180061655E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				38E197EB1B84B3180061655E /* Info.plist */,
+				38E197EC1B84B3180061655E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		38E198031B84B3180061655E /* NumpadWithButtonsTests */ = {
+			isa = PBXGroup;
+			children = (
+				38E198061B84B3180061655E /* NumpadWithButtonsTests.m */,
+				38E198041B84B3180061655E /* Supporting Files */,
+			);
+			path = NumpadWithButtonsTests;
+			sourceTree = "<group>";
+		};
+		38E198041B84B3180061655E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				38E198051B84B3180061655E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		38E197E61B84B3180061655E /* NumpadWithButtons */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38E1980A1B84B3180061655E /* Build configuration list for PBXNativeTarget "NumpadWithButtons" */;
+			buildPhases = (
+				38E197E31B84B3180061655E /* Sources */,
+				38E197E41B84B3180061655E /* Frameworks */,
+				38E197E51B84B3180061655E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NumpadWithButtons;
+			productName = NumpadWithButtons;
+			productReference = 38E197E71B84B3180061655E /* NumpadWithButtons.app */;
+			productType = "com.apple.product-type.application";
+		};
+		38E197FF1B84B3180061655E /* NumpadWithButtonsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38E1980D1B84B3180061655E /* Build configuration list for PBXNativeTarget "NumpadWithButtonsTests" */;
+			buildPhases = (
+				38E197FC1B84B3180061655E /* Sources */,
+				38E197FD1B84B3180061655E /* Frameworks */,
+				38E197FE1B84B3180061655E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				38E198021B84B3180061655E /* PBXTargetDependency */,
+			);
+			name = NumpadWithButtonsTests;
+			productName = NumpadWithButtonsTests;
+			productReference = 38E198001B84B3180061655E /* NumpadWithButtonsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		38E197DF1B84B3180061655E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Amitai Blickstein, LLC";
+				TargetAttributes = {
+					38E197E61B84B3180061655E = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					38E197FF1B84B3180061655E = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 38E197E61B84B3180061655E;
+					};
+				};
+			};
+			buildConfigurationList = 38E197E21B84B3180061655E /* Build configuration list for PBXProject "NumpadWithButtons" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 38E197DE1B84B3180061655E;
+			productRefGroup = 38E197E81B84B3180061655E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				38E197E61B84B3180061655E /* NumpadWithButtons */,
+				38E197FF1B84B3180061655E /* NumpadWithButtonsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		38E197E51B84B3180061655E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38E197F61B84B3180061655E /* Main.storyboard in Resources */,
+				38E197FB1B84B3180061655E /* LaunchScreen.xib in Resources */,
+				38E197F81B84B3180061655E /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38E197FE1B84B3180061655E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		38E197E31B84B3180061655E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38E197F31B84B3180061655E /* ViewController.m in Sources */,
+				38E197F01B84B3180061655E /* AppDelegate.m in Sources */,
+				38E197ED1B84B3180061655E /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38E197FC1B84B3180061655E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38E198071B84B3180061655E /* NumpadWithButtonsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		38E198021B84B3180061655E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38E197E61B84B3180061655E /* NumpadWithButtons */;
+			targetProxy = 38E198011B84B3180061655E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		38E197F41B84B3180061655E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38E197F51B84B3180061655E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		38E197F91B84B3180061655E /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38E197FA1B84B3180061655E /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		38E198081B84B3180061655E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		38E198091B84B3180061655E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		38E1980B1B84B3180061655E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = NumpadWithButtons/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		38E1980C1B84B3180061655E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = NumpadWithButtons/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		38E1980E1B84B3180061655E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NumpadWithButtonsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NumpadWithButtons.app/NumpadWithButtons";
+			};
+			name = Debug;
+		};
+		38E1980F1B84B3180061655E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NumpadWithButtonsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NumpadWithButtons.app/NumpadWithButtons";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		38E197E21B84B3180061655E /* Build configuration list for PBXProject "NumpadWithButtons" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38E198081B84B3180061655E /* Debug */,
+				38E198091B84B3180061655E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38E1980A1B84B3180061655E /* Build configuration list for PBXNativeTarget "NumpadWithButtons" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38E1980B1B84B3180061655E /* Debug */,
+				38E1980C1B84B3180061655E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		38E1980D1B84B3180061655E /* Build configuration list for PBXNativeTarget "NumpadWithButtonsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38E1980E1B84B3180061655E /* Debug */,
+				38E1980F1B84B3180061655E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 38E197DF1B84B3180061655E /* Project object */;
+}
