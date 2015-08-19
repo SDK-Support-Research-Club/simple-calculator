@@ -10,13 +10,5 @@
 
 @interface ViewController : UIViewController <UITextFieldDelegate>
 
-//-(NSInteger)addOperation;
-//-(NSInteger)subtractOperation;
-//-(NSInteger)multiplyOperation;
-//-(NSInteger)divideOperation;
-//-(void)flipSign:(UITextField*)number;
-//-(NSInteger)resultsForOperation:(UILabel*)operationLabel;
-
-
 @end
 

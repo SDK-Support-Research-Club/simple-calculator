@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Amitai Blickstein, LLC. All rights reserved.
 //
 
-#import "ViewController.h"
+    //↓↓My standard lazy debug macro
 #define DBLG NSLog(@"%@ reporting!", NSStringFromSelector(_cmd));
-
+#import "ViewController.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *number1TxF;
@@ -61,7 +61,7 @@
     displayedNumber = activeTextfield.text;
     
     if (displayedNumber.length) {
-            //NSString → double → [do operation] → Output Number → NSNumber → NSString
+            //NSString → double → [do operation] → output double → NSNumber → NSString
         double numberValue = [displayedNumber doubleValue];
         double flippedNumber = numberValue * -1;
         NSString *flippedValue = [[NSNumber numberWithDouble:flippedNumber] stringValue];
@@ -72,6 +72,7 @@
 }
 
 -(void)calculateResults {
+    DBLG
         //Test that neither textfield is empty; you may prefer to
         //default an empty field as '0', or some other behavior.
     if (!(self.number1TxF.text.length *
@@ -79,9 +80,7 @@
         NSLog(@"Error, need two operands.");
         return;
     }
-    DBLG
-        //NSString → double → [do operation] → Output Number → NSNumber → NSString
-    
+        //NSString → double → [do operation] → output double → NSNumber → NSString
     double numberValue1 = [self.number1TxF.text doubleValue];
     double numberValue2 = [self.number2TxF.text doubleValue];
     double resultValue = 0.0;
@@ -99,11 +98,6 @@
     }
     NSString *resultsString = [@(resultValue) stringValue];
     self.resultsLabel.text = resultsString;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
