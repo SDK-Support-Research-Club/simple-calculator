@@ -107,6 +107,12 @@
 
 
 -(void)calculateResults {
+    if (self.number1TxF.text.length *
+        self.number2TxF.text.length) {
+        
+    } else {
+        NSLog(@"Error, need two operands.");
+    }
 }
 
 
