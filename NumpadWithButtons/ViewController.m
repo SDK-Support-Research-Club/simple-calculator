@@ -24,12 +24,12 @@
     [super viewDidLoad];
 
     /**
-     *  Our calculator's buttons: +,-,*,/,= and "+/-"
+     *  Our calculator's buttons: +,-,x,÷,= and "+/-"
      */
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithTitle:@"+" style:UIBarButtonItemStylePlain target:self action:@selector(prepareToAdd)];
     UIBarButtonItem *subtractButton = [[UIBarButtonItem alloc] initWithTitle:@"-" style:UIBarButtonItemStylePlain target:self action:@selector(prepareToSubtract)];
-    UIBarButtonItem *multiplyButton = [[UIBarButtonItem alloc] initWithTitle:@"*" style:UIBarButtonItemStylePlain target:self action:@selector(prepareToMultiply)];
-    UIBarButtonItem *divideButton = [[UIBarButtonItem alloc] initWithTitle:@"/" style:UIBarButtonItemStylePlain target:self action:@selector(prepareToDivide)];
+    UIBarButtonItem *multiplyButton = [[UIBarButtonItem alloc] initWithTitle:@"x" style:UIBarButtonItemStylePlain target:self action:@selector(prepareToMultiply)];
+    UIBarButtonItem *divideButton = [[UIBarButtonItem alloc] initWithTitle:@"÷" style:UIBarButtonItemStylePlain target:self action:@selector(prepareToDivide)];
     UIBarButtonItem *flipSign = [[UIBarButtonItem alloc] initWithTitle:@"+/-" style:UIBarButtonItemStylePlain target:self action:@selector(flipSignOfActiveTextField)];
     UIBarButtonItem *equalsButton = [[UIBarButtonItem alloc] initWithTitle:@"=" style:UIBarButtonItemStylePlain target:self action:@selector(calculateResults)];
     
@@ -48,8 +48,8 @@
     //The style for these lines of code chosen for clarity.
 -(void)prepareToAdd      {self.operationSymbol.text = @"+";}
 -(void)prepareToSubtract {self.operationSymbol.text = @"-";}
--(void)prepareToMultiply {self.operationSymbol.text = @"*";}
--(void)prepareToDivide   {self.operationSymbol.text = @"/";}
+-(void)prepareToMultiply {self.operationSymbol.text = @"x";}
+-(void)prepareToDivide   {self.operationSymbol.text = @"÷";}
 
 -(void)flipSignOfActiveTextField {
     DBLG
@@ -90,10 +90,10 @@
     if ([self.operationSymbol.text isEqualToString:@"-"]) {
         resultValue = numberValue1 - numberValue2;
     }
-    if ([self.operationSymbol.text isEqualToString:@"*"]) {
+    if ([self.operationSymbol.text isEqualToString:@"x"]) {
         resultValue = numberValue1 * numberValue2;
     }
-    if ([self.operationSymbol.text isEqualToString:@"/"]) {
+    if ([self.operationSymbol.text isEqualToString:@"÷"]) {
         resultValue = numberValue1 / numberValue2;
     }
     NSString *resultsString = [@(resultValue) stringValue];
