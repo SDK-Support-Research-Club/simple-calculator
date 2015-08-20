@@ -26,12 +26,12 @@
     /**
      *  Our calculator's buttons: +,-,x,÷,= and "+/-"
      */
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithTitle:@"+" style:UIBarButtonItemStylePlain target:self action:@selector(prepareToAdd)];
+    UIBarButtonItem *addButton      = [[UIBarButtonItem alloc] initWithTitle:@"+" style:UIBarButtonItemStylePlain target:self action:@selector(prepareToAdd)];
     UIBarButtonItem *subtractButton = [[UIBarButtonItem alloc] initWithTitle:@"-" style:UIBarButtonItemStylePlain target:self action:@selector(prepareToSubtract)];
     UIBarButtonItem *multiplyButton = [[UIBarButtonItem alloc] initWithTitle:@"x" style:UIBarButtonItemStylePlain target:self action:@selector(prepareToMultiply)];
-    UIBarButtonItem *divideButton = [[UIBarButtonItem alloc] initWithTitle:@"÷" style:UIBarButtonItemStylePlain target:self action:@selector(prepareToDivide)];
-    UIBarButtonItem *flipSign = [[UIBarButtonItem alloc] initWithTitle:@"+/-" style:UIBarButtonItemStylePlain target:self action:@selector(flipSignOfActiveTextField)];
-    UIBarButtonItem *equalsButton = [[UIBarButtonItem alloc] initWithTitle:@"=" style:UIBarButtonItemStylePlain target:self action:@selector(calculateResults)];
+    UIBarButtonItem *divideButton   = [[UIBarButtonItem alloc] initWithTitle:@"÷" style:UIBarButtonItemStylePlain target:self action:@selector(prepareToDivide)];
+    UIBarButtonItem *flipSign       = [[UIBarButtonItem alloc] initWithTitle:@"+/-" style:UIBarButtonItemStylePlain target:self action:@selector(flipSignOfActiveTextField)];
+    UIBarButtonItem *equalsButton   = [[UIBarButtonItem alloc] initWithTitle:@"=" style:UIBarButtonItemStylePlain target:self action:@selector(calculateResults)];
     
     UIToolbar *calculatorOperationsBar = [UIToolbar new];
     [calculatorOperationsBar setItems:@[equalsButton,
@@ -62,11 +62,11 @@
     
     if (displayedNumber.length) {
             //NSString → double → [do operation] → output double → NSNumber → NSString
-        double numberValue = [displayedNumber doubleValue];
-        double flippedNumber = numberValue * -1;
+        double numberValue     = [displayedNumber doubleValue];
+        double flippedNumber   = numberValue * -1;
         NSString *flippedValue = [[NSNumber numberWithDouble:flippedNumber] stringValue];
             //↑ Also good: NSNumber literal notation @(), like so: [@(flippedNumber) stringValue]
-        activeTextfield.text = flippedValue;
+        activeTextfield.text   = flippedValue;
     }
     
 }
@@ -97,7 +97,7 @@
         resultValue = numberValue1 / numberValue2;
     }
     NSString *resultsString = [@(resultValue) stringValue];
-    self.resultsLabel.text = resultsString;
+    self.resultsLabel.text  = resultsString;
 }
 
 @end
