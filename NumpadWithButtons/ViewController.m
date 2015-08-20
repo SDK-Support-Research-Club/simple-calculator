@@ -27,19 +27,28 @@
      *  Our calculator's buttons: +,-,*,/,= and "+/-"
      */
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithTitle:@"+" style:UIBarButtonItemStylePlain target:self action:@selector(prepareToAdd)];
+    addButton.style = UIBarButtonItemStyleBordered;
     UIBarButtonItem *subtractButton = [[UIBarButtonItem alloc] initWithTitle:@"-" style:UIBarButtonItemStylePlain target:self action:@selector(prepareToSubtract)];
-    UIBarButtonItem *multiplyButton = [[UIBarButtonItem alloc] initWithTitle:@"*" style:UIBarButtonItemStylePlain target:self action:@selector(prepareToMultiply)];
-    UIBarButtonItem *divideButton = [[UIBarButtonItem alloc] initWithTitle:@"/" style:UIBarButtonItemStylePlain target:self action:@selector(prepareToDivide)];
+    UIBarButtonItem *multiplyButton = [[UIBarButtonItem alloc] initWithTitle:@"x" style:UIBarButtonItemStylePlain target:self action:@selector(prepareToMultiply)];
+    UIBarButtonItem *divideButton = [[UIBarButtonItem alloc] initWithTitle:@"÷" style:UIBarButtonItemStylePlain target:self action:@selector(prepareToDivide)];
     UIBarButtonItem *flipSign = [[UIBarButtonItem alloc] initWithTitle:@"+/-" style:UIBarButtonItemStylePlain target:self action:@selector(flipSignOfActiveTextField)];
     UIBarButtonItem *equalsButton = [[UIBarButtonItem alloc] initWithTitle:@"=" style:UIBarButtonItemStylePlain target:self action:@selector(calculateResults)];
+        //This "button" is not actually a button, but a spacing placeholder.
+    UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    UIBarButtonItem *fixedSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+    fixedSpace.width = 125;
     
     UIToolbar *calculatorOperationsBar = [UIToolbar new];
-    [calculatorOperationsBar setItems:@[equalsButton,
+    [calculatorOperationsBar setItems:@[flexibleSpace,
                                         addButton,
                                         subtractButton,
                                         multiplyButton,
                                         divideButton,
-                                        flipSign]];
+                                        fixedSpace,
+                                        equalsButton,
+                                        flexibleSpace,
+                                        flipSign,
+                                        flexibleSpace]];
     [calculatorOperationsBar sizeToFit];
     self.number1TxF.inputAccessoryView = calculatorOperationsBar;
     self.number2TxF.inputAccessoryView = calculatorOperationsBar;
@@ -48,8 +57,8 @@
     //The style for these lines of code chosen for clarity.
 -(void)prepareToAdd      {self.operationSymbol.text = @"+";}
 -(void)prepareToSubtract {self.operationSymbol.text = @"-";}
--(void)prepareToMultiply {self.operationSymbol.text = @"*";}
--(void)prepareToDivide   {self.operationSymbol.text = @"/";}
+-(void)prepareToMultiply {self.operationSymbol.text = @"x";}
+-(void)prepareToDivide   {self.operationSymbol.text = @"÷";}
 
 -(void)flipSignOfActiveTextField {
     DBLG
@@ -90,10 +99,10 @@
     if ([self.operationSymbol.text isEqualToString:@"-"]) {
         resultValue = numberValue1 - numberValue2;
     }
-    if ([self.operationSymbol.text isEqualToString:@"*"]) {
+    if ([self.operationSymbol.text isEqualToString:@"x"]) {
         resultValue = numberValue1 * numberValue2;
     }
-    if ([self.operationSymbol.text isEqualToString:@"/"]) {
+    if ([self.operationSymbol.text isEqualToString:@"÷"]) {
         resultValue = numberValue1 / numberValue2;
     }
     NSString *resultsString = [@(resultValue) stringValue];
